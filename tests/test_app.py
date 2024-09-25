@@ -23,6 +23,7 @@ def test_index(client):
 </head>
 <body>
     <h1>Habibi its working</h1>
+    <p>Python and Git Actions</p>
 </body>
 </html>''')
 
