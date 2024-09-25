@@ -25,6 +25,7 @@ def test_index(client):
     <h1>Habibi its working</h1>
     <p>Python and Git Actions</p>
     <h2>I'm studying Github</h2>
+    <h3>niggaaaaa</h3>
 </body>
 </html>''')
 
