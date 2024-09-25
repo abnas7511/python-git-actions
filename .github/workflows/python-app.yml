@@ -34,6 +34,13 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Trigger Render deployment
+      run: |
+          curl -X POST \
+          -H 'Accept: application/json' \
+          -H 'Authorization: Bearer ${{ secrets.RENDER_API_KEY }}' \
+          -d '' \
+          https://api.render.com/v1/services/python-git-actions/deploys
     - name: Test with pytest
       run: |
         pip install pytest
